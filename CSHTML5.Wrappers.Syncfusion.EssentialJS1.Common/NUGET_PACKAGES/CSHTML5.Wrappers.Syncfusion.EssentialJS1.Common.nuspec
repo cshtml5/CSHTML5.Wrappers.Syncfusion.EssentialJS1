@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common</id>
+    <version>1.0.0-alpha01-001</version>
+    <title>CSHTML5 Syncfusion EssentialJS1 Common v1.0 Alpha 1</title>
+    <authors>Userware</authors>
+    <owners />
+    <projectUrl>http://www.cshtml5.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common classes for the wrappers for the Syncfusion EssentialJS1 controls for CSHTML5. Powered by Bridge.NET</description>
+    <copyright>Copyright (c) 2014-2019, Userware. All rights reserved.</copyright>
+    <tags>csharp C# xaml javascript html html5 compiler Syncfusion EssentialJS1 cshtml5 bridge bridge.net</tags>
+    <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>-->
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
+    <dependencies>
+      <dependency id="CSHTML5" version="2.0.0-alpha17-030" />
+    </dependencies>
+    
+  </metadata>
+  <files>
+    <!-- Syncfusion EssentialJS1 Common runtime -->
+    <file src="../bin/Debug/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.dll" target="lib/net40/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.dll" />
+    <file src="../bin/Debug/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.pdb" target="lib/net40/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.pdb" />
+    <file src="../bin/Debug/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.xml" target="lib/net40/CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.xml" />
+  </files>
+</package>

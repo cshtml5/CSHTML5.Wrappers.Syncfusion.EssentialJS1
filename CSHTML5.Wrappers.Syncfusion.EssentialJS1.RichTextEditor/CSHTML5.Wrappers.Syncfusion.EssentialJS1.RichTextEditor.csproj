@@ -25,6 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
+    <DocumentationFile>bin\Debug\CSHTML5.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bridge.json" />
+    <None Include="NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
