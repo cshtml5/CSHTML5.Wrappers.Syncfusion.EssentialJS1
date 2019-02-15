@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if SLMIGRATION
+using System.Windows;
+#else
 using Windows.UI.Xaml;
+#endif
 
 namespace CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common
 {
@@ -106,7 +110,7 @@ namespace CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common
             // Do nothing by default.
         }
 
-        protected virtual async void JSComponent_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        protected virtual async void JSComponent_Loaded(object sender, RoutedEventArgs e)
         {
             await this.JSLibrary.Load();
 

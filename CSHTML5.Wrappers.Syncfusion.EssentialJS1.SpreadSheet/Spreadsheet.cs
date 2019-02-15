@@ -8,9 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TypeScriptDefinitionsSupport;
+#if SLMIGRATION
+using System.Windows;
+using System.Windows.Data;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+#endif
 
 namespace ej_spreadsheet.ej
 {
@@ -50,10 +55,17 @@ namespace ej_spreadsheet.ej
                     },
                     js: new Interop.ResourceFile[]
                     {
+#if SLMIGRATION
+                        new Interop.ResourceFile("jQuery", "ms-appx:///CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery-1.10.2.min.js"),
+                        new Interop.ResourceFile("jQueryGlobalize", "ms-appx:///CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery.globalize.min.js"),
+                        new Interop.ResourceFile("jQueryValidate", "ms-appx:///CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery.validate.min.js"),
+                        new Interop.ResourceFile("jsRender", "ms-appx:///CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jsrender.min.js"),
+#else
                         new Interop.ResourceFile("jQuery", "ms-appx:///CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery-1.10.2.min.js"),
                         new Interop.ResourceFile("jQueryGlobalize", "ms-appx:///CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery.globalize.min.js"),
                         new Interop.ResourceFile("jQueryValidate", "ms-appx:///CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jquery.validate.min.js"),
                         new Interop.ResourceFile("jsRender", "ms-appx:///CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/jsrender.min.js"),
+#endif
                         new Interop.ResourceFile("ej.spreadsheet", Configuration.LocationOfEjSpreadsheetJS) // e.g. "ms-appx:///CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet/scripts/ej.spreadsheet.min.js"
                     }
                 );

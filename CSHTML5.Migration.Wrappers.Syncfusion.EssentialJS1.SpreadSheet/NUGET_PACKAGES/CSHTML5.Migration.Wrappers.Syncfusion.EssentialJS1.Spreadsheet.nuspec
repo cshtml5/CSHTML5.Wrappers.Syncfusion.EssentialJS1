@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet</id>
+    <version>1.0.0-alpha01-001</version>
+    <title>CSHTML5 Migration Syncfusion EssentialJS1 Spreadsheet v1.0 Alpha 1</title>
+    <authors>Userware</authors>
+    <owners />
+    <projectUrl>http://www.cshtml5.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wrapper for the Syncfusion EssentialJS1 Spreadsheet control for CSHTML5 Migration. Powered by Bridge.NET</description>
+    <copyright>Copyright (c) 2014-2019, Userware. All rights reserved.</copyright>
+    <tags>csharp C# xaml javascript html html5 compiler Syncfusion EssentialJS1 Spreadsheet cshtml5 bridge bridge.net</tags>
+    <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>-->
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
+    <dependencies>
+      <dependency id="CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Common" version="1.0.0-alpha01-001" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Syncfusion EssentialJS1 Spreadsheet runtime -->
+    <file src="../bin/Debug/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.dll" target="lib/net40/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.dll" />
+    <file src="../bin/Debug/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.pdb" target="lib/net40/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.pdb" />
+    <file src="../bin/Debug/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.xml" target="lib/net40/CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.xml" />
+
+    
+  </files>
+</package>
