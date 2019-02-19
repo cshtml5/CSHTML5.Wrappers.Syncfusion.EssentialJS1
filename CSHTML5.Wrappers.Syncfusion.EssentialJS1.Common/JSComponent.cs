@@ -113,17 +113,23 @@ namespace CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common
         protected virtual async void JSComponent_Loaded(object sender, RoutedEventArgs e)
         {
             await this.JSLibrary.Load();
-
-            if (this.initJSInstance)
-                this.InitializeJSInstance();
-            // Using a Dispatcher because we need the component to be fully loaded before being able to properly modify the visual tree (we might meet uninitialized elements otherwise).
-            // before this fix (2019/01/28), the Sample Showcase can display such an error when clicking on Third Party -> Telerik Kendo UI -> Grid then reclicking Grid
-            Dispatcher.BeginInvoke(() =>
+            if (this.JSLibrary.IsLoaded)
             {
-                this.jsInstanceLoaded.SetResult(true);
+                if (this.initJSInstance)
+                    this.InitializeJSInstance();
+                // Using a Dispatcher because we need the component to be fully loaded before being able to properly modify the visual tree (we might meet uninitialized elements otherwise).
+                // before this fix (2019/01/28), the Sample Showcase can display such an error when clicking on Third Party -> Telerik Kendo UI -> Grid then reclicking Grid
+                Dispatcher.BeginInvoke(() =>
+                {
+                    this.jsInstanceLoaded.SetResult(true);
 
-                this.OnJSInstanceLoaded();
-            });
+                    this.OnJSInstanceLoaded();
+                });
+            }
+            else
+            {
+                this.jsInstanceLoaded.SetResult(false);
+            }
         }
 
         protected void AbortLoading()

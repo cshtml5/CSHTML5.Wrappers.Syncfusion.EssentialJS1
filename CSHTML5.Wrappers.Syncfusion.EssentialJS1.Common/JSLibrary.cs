@@ -43,13 +43,21 @@ namespace CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common
         {
             if (!this.IsLoaded)
             {
+                bool wasLoadingSuccessful = true;
                 foreach (var url in this.CSS)
                     await Interop.LoadCssFile(url);
 
                 foreach (var url in this.JS)
-                    await Interop.LoadJavaScriptFile(url);
-
-                this.IsLoaded = true;
+                    try
+                    {
+                        await Interop.LoadJavaScriptFile(url);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        wasLoadingSuccessful = false;
+                    }
+                this.IsLoaded = wasLoadingSuccessful;
             }
         }
 

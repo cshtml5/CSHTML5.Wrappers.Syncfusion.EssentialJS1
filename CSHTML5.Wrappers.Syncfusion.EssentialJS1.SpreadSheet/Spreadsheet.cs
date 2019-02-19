@@ -21,6 +21,7 @@ namespace ej_spreadsheet.ej
 {
     public partial class Spreadsheet : JSComponent, IItemsSourceHolder
     {
+        bool _isInstanceLoaded = false;
         public static Configuration Configuration = new Configuration();
 
         static  JSLibrary _jsLibrary;
@@ -73,8 +74,10 @@ namespace ej_spreadsheet.ej
             }
             else
             {
+                this.Html = @"Before you can use the Syncfusion Spreadsheet Control, you must add to your project the corresponding libraries.
+To do so, please follow the tutorial at: http://www.cshtml5.com";
                 MessageBox.Show(@"Before you can use the Syncfusion Spreadsheet Control, you must add to your project the corresponding libraries.
-To do so, please follow the tutorial at: http://www.cshtml5.com"); //todo: put the address of the tutorial.
+To do so, please follow the tutorial at: http://www.cshtml5.com");
                 base.AbortLoading();
             }
         }
@@ -185,9 +188,18 @@ To do so, please follow the tutorial at: http://www.cshtml5.com"); //todo: put t
 
             if (oldValue != newValue)
             {
-                await @this.JSInstanceLoaded;
-
-                @this.dataBinder.UpdateTarget(oldValue, newValue);
+                if (await @this.JSInstanceLoaded)
+                {
+                    @this.dataBinder.UpdateTarget(oldValue, newValue);
+                }
+                else
+                {
+                    if (Configuration.AreSourcesSet)
+                    {
+                        @this.Html = @"The libraries for the Syncfusion Spreadsheet Control could not be found. Make sure you have added them in your project at the location you specified in the Configuration.";
+                        MessageBox.Show(@"The libraries for the Syncfusion Spreadsheet Control could not be found. Make sure you have added them in your project at the location you specified in the Configuration.");
+                    }
+                }
             }
         }
     }
