@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common", "CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common\CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.csproj", "{B2F32D3A-A767-482E-83FB-B74FB509068B}"
 EndProject
@@ -14,6 +14,24 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.RichTextEditor", "CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.RichTextEditor\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.csproj", "{BA4EC99A-3E6B-43CA-8E48-DE214A069CAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.SpreadSheet", "CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.SpreadSheet\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.SpreadSheet.csproj", "{BC619D69-0C1A-48F1-8895-9E385F7A523A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUGET_PACKAGES", "NUGET_PACKAGES", "{0AA15AB4-9791-45D6-BE91-CA10149CF838}"
+	ProjectSection(SolutionItems) = preProject
+		NUGET_PACKAGES\Build NuGet packages.bat = NUGET_PACKAGES\Build NuGet packages.bat
+		NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Common.nuspec = NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Common.nuspec
+		NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.nuspec = NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.nuspec
+		NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.nuspec = NUGET_PACKAGES\CSHTML5.Migration.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.nuspec
+		NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.nuspec = NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.nuspec
+		NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.nuspec = NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.RichTextEditor.nuspec
+		NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.nuspec = NUGET_PACKAGES\CSHTML5.Wrappers.Syncfusion.EssentialJS1.Spreadsheet.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtLibs", "ExtLibs", "{52A0E324-D43F-41BE-BF28-2D14A2E4FCEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B84BC0B8-E846-413F-966C-7971AF860F3C}"
+	ProjectSection(SolutionItems) = preProject
+		ExtLibs\NuGet\nuget.exe = ExtLibs\NuGet\nuget.exe
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,5 +66,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B84BC0B8-E846-413F-966C-7971AF860F3C} = {52A0E324-D43F-41BE-BF28-2D14A2E4FCEA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D89DD66D-B0F0-4595-847C-60AC94A0EF3A}
 	EndGlobalSection
 EndGlobal
