@@ -85,7 +85,7 @@ namespace CSHTML5.Wrappers.Syncfusion.EssentialJS1.Common.Json
 #if BRIDGE
             else if (cSharpObject != null && cSharpObject.GetType().IsValueType)
             {
-                return Interop.ExecuteJavaScript("$0.v", cSharpObject);
+                return Interop.Unbox(cSharpObject);
             }
 #endif
             else if (cSharpObject is IEnumerable && !(cSharpObject is string))
